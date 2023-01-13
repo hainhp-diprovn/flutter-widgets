@@ -13174,11 +13174,11 @@ String _getMonthHeaderText(
     if (isHijri) {
       text =
           // ignore: lines_longer_than_80_chars
-          '${DateRangePickerHelper.getHijriMonthText(middleDate, localizations, monthTextFormat)} ${middleDate.year}';
+          ‘${middleDate.year}年 ${DateRangePickerHelper.getHijriMonthText(middleDate, localizations, monthTextFormat)}‘;
     } else {
       text =
-          '${DateFormat(monthTextFormat, locale.toString()).format(middleDate)}'
-          ' ${middleDate.year}';
+          ‘${middleDate.year}年’
+          ' ${DateFormat(monthTextFormat, locale.toString()).format(middleDate)}’;
     }
 
     /// To restrict the double header when the number of weeks in view given
